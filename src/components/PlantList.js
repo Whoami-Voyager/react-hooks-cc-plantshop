@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import PlantCard from "./PlantCard";
 
-function PlantList({ plant, setPlant, wallE }) {
+function PlantList({ plant, setPlant, wallE, plantNewPrice, setPlantPrice }) {
 
   const foundPlant = plant.filter((plants) => {
     return plants.name.toLowerCase().includes(wallE.toLowerCase())
@@ -23,13 +23,13 @@ function PlantList({ plant, setPlant, wallE }) {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(pricePlant)
+      body: JSON.stringify({price: pricePlant})
     })
-    setNewPrice()
+    setPlantPrice()
   }
 
   const Eva = foundPlant.map((plant) => {
-    return <PlantCard key={plant.id} plant={plant} deletePlant={deletePlant} plantPrice={plantPrice} />
+    return <PlantCard key={plant.id} plant={plant} plantNewPrice={plantNewPrice} deletePlant={deletePlant} setPlantPrice={setPlantPrice} plantPrice={plantPrice} />
   })
 
   return (

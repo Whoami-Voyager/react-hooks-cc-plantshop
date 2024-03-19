@@ -47,6 +47,12 @@
       "name": "Wall-E",
       "image": "https://www.iconarchive.com/download/i3547/artua/wall-e/plant.ico",
       "price": 69
+    },
+    {
+      "name": "Cactus",
+      "image": "https://hips.hearstapps.com/hmg-prod/images/types-of-cactus-fairycastle-acanthocereus-tetragonus-1658767825.jpeg?crop=0.466xw:0.877xh;0.534xw,0.123xh&resize=980:*",
+      "price": "420",
+      "id": 9
     }
   ]
 }

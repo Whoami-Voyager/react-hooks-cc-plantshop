@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 
-function NewPlantForm({ addPlant }) {
+function NewPlantForm({ addPlant, setPlantPrice, plantPrice }) {
   const [plantName, setPlantName] = useState("")
   const [plantImage, setPlantImage] = useState("")
-  const [plantPrice, setPlantPrice] = useState(0)
 
   return (
     <div className="new-plant-form">

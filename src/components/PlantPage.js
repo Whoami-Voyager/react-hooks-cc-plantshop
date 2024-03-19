@@ -6,6 +6,7 @@ import Search from "./Search";
 function PlantPage() {
   const [plant, setPlant] = useState([])
   const [wallE, searchPlant] = useState("")
+  const [plantNewPrice, setPlantPrice] = useState(0)
 
   useEffect(() => {
     fetch("http://localhost:6001/plants")
@@ -23,18 +24,18 @@ function PlantPage() {
       },
       body: JSON.stringify(newSubmitPlant)
     })
-    .then(r=>r.json())
-    .then(data => {
-      const newPlant = [...plant, data]
-      setPlant(newPlant)
-    })
+      .then(r => r.json())
+      .then(data => {
+        const newPlant = [...plant, data]
+        setPlant(newPlant)
+      })
   }
 
   return (
     <main>
-      <NewPlantForm addPlant={addPlant}/>
-      <Search searchPlant={searchPlant}/>
-      <PlantList plant={plant} setPlant={setPlant} wallE={wallE}/>
+      <NewPlantForm addPlant={addPlant} setPlantPrice={setPlantPrice} plantPrice={plantNewPrice} />
+      <Search searchPlant={searchPlant} />
+      <PlantList plant={plant} setPlant={setPlant} wallE={wallE} plantNewPrice={plantNewPrice} setPlantPrice={setPlantPrice} />
     </main>
   );
 }
