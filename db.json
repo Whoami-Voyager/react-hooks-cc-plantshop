@@ -16,7 +16,7 @@
       "id": 3,
       "name": "Pilea peperomioides",
       "image": "./images/pilea.jpg",
-      "price": 5.99
+      "price": "29"
     },
     {
       "id": 4,
@@ -41,6 +41,12 @@
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
+    },
+    {
+      "id": 8,
+      "name": "Wall-E",
+      "image": "https://www.iconarchive.com/download/i3547/artua/wall-e/plant.ico",
+      "price": 69
     }
   ]
 }
